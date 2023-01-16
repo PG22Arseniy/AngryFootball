@@ -1,0 +1,175 @@
+<!-- Copyright (C) 2022 Shatrujit Kumar, All Rights Reserved -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Custom Favicon to match our Flag/Marker -->
+        <!-- <link rel="icon" type="image/x-icon" href="images/favicon.png"> -->
+
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Style sheet links -->
+        <!-- Base styles -->
+        <link rel="stylesheet" type="text/css" href="./css/style-base.css"/>
+        <!-- Grid definitions -->
+        <link rel="stylesheet" type="text/css" href="./css/style-grid.css"/>
+        <!-- Custom sheet for this app -->
+        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+
+        <!-- App Title -->
+        <title>Level Editor</title>
+    </head>
+
+    <body class="grid-wrapper">
+
+        <!-- Buttons to save or create new levels and objects -->
+        <header class="grid-row-head grid-column-full list-block">
+            <button id="save-level">Save Level</button>
+            <input id="level-name" placeholder="New Level Name">
+            <button id="new-level">New Level</button>
+            <button id="save-object">Save Object</button>
+
+            <!-- Username used for server requests -->
+            <input id="username" placeholder="Username" style="position:absolute; right:0;">
+        </header>
+
+        <!-- Level display area -->
+        <main class="grid-row-main grid-column-full level-display" id="main">
+            <section class="app-container">
+            </section>
+        </main>
+
+        <!-- Level details display -->
+        <form id="level-data-form" class="grid-row-tail grid-sidebar-left details-container">
+
+            <div>
+                <label>Level: </label>
+                <span class="input-container">
+                    <select name="filename" type="text" id="level-select"></select>
+                </span>
+            </div>
+
+            <div>
+                <label>Obstacles: </label>
+                <span class="input-container">
+                    <input name="obstacles" type="number">
+                </span>
+            </div>
+
+            <div>
+                <label>Cannons: </label>
+                <span class="input-container">
+                    <input name="cannons" type="number">
+                </span>
+            </div>
+
+            <div>
+                <label>Shots: </label>
+                <span class="input-container">
+                    <input name="projectiles" type="number">
+                </span>
+            </div>
+
+            <div>
+                <label>Theme: </label>
+                <span class="input-container">
+                    <select name="theme" type="text" id="theme-select"></select>
+                </span>
+            </div>
+
+            <div>
+                <label>One Star: </label>
+                <span class="input-container">
+                    <input name="oneStar" type="number">
+                </span>
+            </div>
+
+            <div>
+                <label>Two Stars: </label>
+                <span class="input-container">
+                    <input name="twoStar" type="number">
+                </span>
+            </div>
+
+            <div>
+                <label>Three Stars: </label>
+                <span class="input-container">
+                    <input name="threeStar" type="number">
+                </span>
+            </div>
+        </form>
+
+        <!-- Prefabs container -->
+        <div class="grid-row-tail grid-column-main" id="prefabs-container">
+        </div>
+
+        <!-- Object details display -->
+        <form id="object-data-form" class="grid-row-tail grid-sidebar-right details-container">
+
+            <div>
+                <label>Name: </label>
+                <span class="input-container">
+                    <input name="name" type="text" disabled>
+                </span>
+            </div>
+
+            <div>
+                <label>Height: </label>
+                <span class="input-container">
+                    <input name="height" type="number" disabled>
+                </span>
+            </div>
+
+            <div>
+                <label>Width: </label>
+                <span class="input-container">
+                    <input name="width" type="number" disabled>
+                </span>
+            </div>
+
+            <div>
+                <label>Image: </label>
+                <span class="input-container">
+                    <input name="texture" type="text" disabled>
+                </span>
+            </div>
+
+            <div>
+                <label>Mass: </label>
+                <span class="input-container">
+                    <input name="mass" type="number" disabled>
+                </span>
+            </div>
+
+            <div>
+                <label>Bounciness: </label>
+                <span class="input-container">
+                    <input name="restitution" type="number" disabled>
+                </span>
+            </div>
+
+            <div>
+                <label>Friction: </label>
+                <span class="input-container">
+                    <input name="friction" type="number" disabled>
+                </span>
+            </div>
+
+            <div>
+                <label>Points: </label>
+                <span class="input-container">
+                    <input name="value" type="number" disabled>
+                </span>
+            </div>
+        </form>
+
+        <footer class="grid-row-foot grid-sidebar-left">
+            <p>&copy; Shatrujit Aditya Kumar 2022</p>
+        </footer>
+    </body>
+
+    <!-- Loading app scripts -->
+    <script src="./scripts/index.js" type="module"></script>
+</html>

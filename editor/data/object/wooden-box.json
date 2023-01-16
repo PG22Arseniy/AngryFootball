@@ -1,0 +1,12 @@
+{
+    "name": "Wooden Box",
+    "value": "0",
+    "height": "70",
+    "width": "70",
+    "texture": "images/wooden-box.png",
+    "mass": "90",
+    "restitution": "0",
+    "friction": "1",
+    "shape": "rectangle",
+    "hide": true
+}

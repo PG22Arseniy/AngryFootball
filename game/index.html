@@ -1,0 +1,129 @@
+<!-- Copyright (C) 2022 Arseniy Skudaev, Shatrujit Kumar, All Rights Reserved -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+        <!-- Custom Favicon to match our Flag/Marker -->
+        <!-- <link rel="icon" type="image/x-icon" href="images/favicon.png"> -->
+
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Style sheet links -->
+        <!-- Base styles -->
+        <link rel="stylesheet" type="text/css" href="../editor/css/style-base.css"/>
+        <!-- Grid definitions -->
+        <link rel="stylesheet" type="text/css" href="../editor/css/style-grid.css"/>
+        <!-- Custom sheet for this app -->
+        <link rel="stylesheet" type="text/css" href="../editor/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="/game/css/style.css"/>
+        <!-- Buzz for managing audio -->
+        <script src="/game/scripts/buzz.min.js"></script>
+        <!-- App Title -->
+        <title>Angry Football</title>
+    </head>
+
+    <body class="grid-wrapper">
+
+        <!-- Buttons to save or create new levels and objects -->
+        <header class="grid-row-head grid-column-full list-block level-choice"> 
+            <div class="level">
+                <label>Level: </label>
+                <span class="input-container custom-select">  
+                    <select name="filename"  type="text" id="level-select"></select>
+                </span>
+            </div>
+            <div class = "game_score">
+                <div class="final_stars" id="upper_stars"> </div> 
+                <div class="cur_score">
+                    <h2>Your score:</h2>   
+                    <div id = "current_score" class="score_value">0</div>
+                </div>
+            </div> 
+            <div class="game_name"> 
+                <h1>Angry Football</h1>    
+            </div> 
+        </header>
+        <div class="grid-row-top grid-sidebar-left">
+            <span class="button-box">
+                <!-- Volume Icon -->
+                <img src="/game/images/volume-down.svg" class="center-vertical" id="volume-icon"/>
+                <!-- Input to control volume level -->
+                <input type="range" value="20" min="0" max="100" class="center-vertical" id="volume-control"/>
+            </span>
+        </div>
+<div class="level_outcome hide" id ="gameOverScreen">    
+    <h2>  Result  </h2> 
+        <div class = "outcome_board">
+            <div class="Kane_Son"></div> 
+            <div class="outcome_content">
+                <div class ="final_stars" id = "final_stars">
+                    
+                </div>
+            
+                <div class="final_score" id = "final_score">
+                    0  
+                </div>
+
+                <div class="next_level" id = "next_level">
+                    
+                </div> 
+            </div>
+        </div> 
+</div>
+        <div class="splash" id ="splashScreen">
+            <img src ="../editor/images/ball.png" height="70" width="70"/>
+            <h1>Angry Football</h1>
+            <img src ="../editor/images/ball.png" height="70" width="70"/>
+        </div>
+        <!-- Level display area -->
+        <div class="left-side grid-row-main grid-sidebar-left level-display"> 
+            <div class="clubs-image tth-ars">   </div> 
+            <div class = "shotPower_container">  
+                <label for="shotPower">Shot Power:</label>
+                <progress id="shotPower" value="120" max="240"> 50 </progress>      
+            </div>  
+            <div class="game_button_area"> 
+                <h2> Rotate Cannon </h2>  
+                <div class="rotation_buttons" >
+                    
+                    <div id = "cannonUp" class="game_button"> </div> 
+                    <div id = "cannonDown" class="game_button">  </div> 
+                </div>
+                <div id = "launchBall" class="game_button">  </div>   
+                <div class = "projectiles_left" id="projectiles"> 10 </div>        
+            </div> 
+            <div class="clubs-image real-barca" >   </div>   
+        </div>
+        <main class="grid-row-main grid-column-main level-display" id="main">
+       
+            <section class="app-container"> 
+              
+            </section> 
+        </main> 
+        <div class="game_info grid-row-main grid-sidebar-right level-display"> 
+            <div class="milestones">
+                <p id = "1star">0</p>
+                <div  class="star" style="width: 50px;"></div>
+                <p id = "2star">0</p>
+                <div  class="star"  style="width: 100px;"></div>  
+                <p id = "3star">0</p>   
+                <div  class="star"  style="width: 150px;"></div>   
+            </div>
+            <div class="targets_left">  
+                <div class="target"></div>
+                <p id="targets">0</p>   
+            </div>
+        </div> 
+
+        <footer class="grid-row-tail grid-column-main">
+            <p>&copy; Arseniy Skudaev, Shatrujit Aditya Kumar 2022</p>
+        </footer>
+    </body>
+
+    <!-- Loading app scripts -->
+    <script src="/game/scripts/main.js" type="module"></script>
+</html>

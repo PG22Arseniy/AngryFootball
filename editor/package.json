@@ -1,0 +1,29 @@
+{
+  "name": "leveleditor",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Level Editor with server for 'Angry Pigs' (Working Title)",
+  "main": "scripts/server.js",
+  "scripts": {
+    "test": "nodemon --inspect scripts/server.js",
+    "server": "nodemon scripts/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pg22shatrujit/LevelEditor.git"
+  },
+  "author": "Shatrujit Aditya Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pg22shatrujit/LevelEditor/issues"
+  },
+  "homepage": "https://github.com/pg22shatrujit/LevelEditor#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "fs": "0.0.1-security",
+    "fs-extra": "^10.0.1",
+    "http": "0.0.1-security",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

@@ -1,0 +1,1 @@
+{"level":{"name":"test 3","projectiles":10,"cannon":{"x":35,"y":620,"height":70,"width":70},"hide":true,"theme":"Forest","entities":{"collidables":[],"targets":[{"wx":602,"wy":320,"height":70,"width":70,"value":0,"texture":"images/target.png","name":"Target"}]}}}

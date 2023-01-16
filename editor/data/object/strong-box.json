@@ -1,0 +1,12 @@
+{
+    "name": "Strong Box",
+    "value": "0",
+    "height": "70",
+    "width": "70",
+    "texture": "images/strong-box.jpg",
+    "mass": "90",
+    "restitution": "1",
+    "friction": "1",
+    "shape": "square",
+    "hide": true
+}

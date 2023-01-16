@@ -1,0 +1,312 @@
+/* Copyright (C) 2022 Arseniy Skudaev, All Rights Reserved */
+
+/* Containers showing level and object data */
+.details-container {
+    padding:1vh;
+    font-size: 0.8em;
+    background-color: black;
+}
+
+/* Page background and text */
+body {
+    background-color: gray;
+    color: white;
+}
+
+/* Buttons for new and save */
+button {
+    margin-right:5vw;
+}
+
+/* Inherit body background and color for div and span */
+div, span {
+    color: inherit;
+}
+
+/* inputs for level and object details */
+.input-container {
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px
+}
+
+/* Keep labels aligned to left wall */
+label {
+    float: left;
+}
+
+/* Styling for input and select in level and object details containers */
+.input-container > input {
+    color:black;
+    font-size: 1em;
+    height: 1em;
+}
+
+.input-container > select, .input-container > input {
+    font-weight: bold;
+    width: 100%;
+}
+.game_name{
+    margin: auto; 
+}
+h1 { 
+    font-family:Georgia,serif; 
+    margin:0 0 0 0px;
+    color:#A80C1E;
+    display:block;
+    font-size:85px;
+    font-weight:normal;
+    letter-spacing:-3.5px; 
+    line-height:1em;
+    }
+.level{
+    padding: 10px;  
+    border: black 2px solid;
+}
+.level-choice{ 
+    margin: 20px; 
+    padding-left: 100px;  
+    padding-right: 100px;   
+}
+.level-choice label{
+    margin: 20px;  
+    font-weight: bolder; 
+    font-size: larger; 
+}
+select { 
+    background-color: transparent; 
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: larger; 
+    cursor: inherit;
+    line-height: inherit;
+    border: #A80C1E 2px solid; 
+  }
+.custom-select {
+    margin: 20px;  
+    position: relative;
+    font-family: Arial;
+  } 
+.game_score *{ 
+    color: green;  
+    font-size: 2rem;    
+    font-weight: bolder; 
+    padding: 5px;  
+}
+
+.game_score{
+    margin-left: auto;  
+    display: flex; 
+    align-items: center;
+    justify-content: center;  
+} 
+
+.left-side{
+    height: 720px; 
+    margin: auto; 
+}
+.clubs-image{ 
+    margin: 40px;  
+    background-size: contain; 
+    background-repeat: no-repeat;  
+}
+.tth-ars{
+    min-width: 200px; 
+    min-height: 130px;   
+    background-image: url("../images/tottenham_arsenal.png"); 
+}
+.real-barca{
+    min-width: 200px; 
+    min-height: 200px;  
+    background-image: url("../images/real_barca.png");  
+}
+.game_button_area{
+    margin: auto;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px; 
+    border: 2px solid black; 
+}
+
+.rotation_buttons{
+    display: flex;
+  
+    margin: auto ; 
+}
+.game_button{
+    margin: 10px; 
+    opacity: 0.85;
+}
+.game_button:hover{  
+    opacity: 1; 
+}
+#cannonUp{
+    min-width: 50px; 
+    min-height: 50px;  
+    background-image: url("../images/rotate_up.jpg");  
+    background-size: contain;
+    background-repeat: no-repeat; 
+}
+#cannonDown{ 
+    min-width: 50px; 
+    min-height: 50px;  
+    background-image: url("../images/rotate_down.jpg"); 
+    background-size: contain; 
+    background-repeat: no-repeat;  
+    
+}
+#launchBall{
+    min-width: 100px; 
+    min-height: 100px;  
+    background-image: url("../images/shoot.png");
+    background-size: contain; 
+}
+.projectiles_left{
+    font-size: 2rem;
+    font-weight: bold; 
+    color: brown; 
+}
+.game_info{
+    margin: auto; 
+    padding: 0 10px;  
+    max-width: 180px;
+}
+.star{
+    min-height: 40px;   
+    background-image: url("../images/star.png"); 
+    background-size: contain; 
+}
+p{ 
+    margin-left: 20px; 
+    font-size: larger;
+    font-weight: bolder; 
+} 
+.targets_left{
+    margin-top: 20px; 
+    display: flex;
+    align-items: center; 
+}
+.target{
+    min-width: 75px;  
+    min-height: 75px;   
+    background-image: url("../images/target.png"); 
+    background-size: contain; 
+    background-repeat: no-repeat;   
+}
+.hide {
+    display: none;
+}
+
+/* Level display area */
+.app-container {
+    width: 1280px;
+    height: 720px;
+    background-color: green;
+    position: relative;
+}
+
+/* Styling for prefabs and game objects */
+.prefab {
+    height: var(--height);
+    width: var(--width);
+    display:inline-block;
+    background-image: var(--image);
+    background-size: 100% 100%;
+}
+
+.game-object {
+    height: var(--height);
+    width: var(--width);
+    display:inline-block;
+    background-image: var(--image);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: move;
+}
+
+/* Mark when an object has been placed in the scene */
+.placed {
+    background-color: transparent;
+}
+
+/* Outline selected object */
+.highlighted {
+    outline: 1px solid yellow;
+    outline-offset: 9px;
+} 
+
+.level_outcome{
+    position: absolute;
+    left: 40%;  
+    top: 30%;  
+    width: 600px;
+    height: 400px;   
+    background: #A80C1E; 
+    z-index: 1;
+    display: block;
+}
+.level_outcome h2{
+    text-align: center; 
+}
+.outcome_board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Kane_Son{
+    background-image: url("../images/kane-son.png");  
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    margin: auto; 
+    height: 300px;    
+    width: 200px; 
+}
+.outcome_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: auto; 
+}
+
+.final_score{ 
+    font-size: 2.5rem; 
+    color: coral;
+    margin: auto;
+    padding: 30px 0;  
+}
+.final_stars{
+    min-height: 40px;   
+    background-image: url("../images/star.png"); 
+    background-size: contain; 
+    width: 150px;
+   
+    margin: auto; 
+}
+.next_level{
+    margin: auto; 
+}
+.hide{ 
+    display: none;  
+}
+.disabled{ 
+    opacity: 0.5; 
+    pointer-events:none; 
+}
+.next_level{
+    min-width: 75px;  
+    min-height: 75px;   
+    background-image: url("../images/next.png");  
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    opacity: 0.85;  
+}
+.next_level:hover{
+    opacity: 1; 
+}

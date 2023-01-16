@@ -1,0 +1,35 @@
+/* Copyright (C) 2022 Arseniy Skudaev, Shatrujit Aditya Kumar, All Rights Reserved */
+
+/* Stop the caret showing up on images */
+body {
+    caret-color: transparent;
+    color: white;
+}
+body, html {
+    background-color: gray;
+}
+.game-object {
+    cursor: default;
+    transform-origin: center;
+}
+
+/* Level display parent area */
+.level-display {
+    background:  magenta;
+    height: 720px;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;    */
+}
+
+/* Splash covers the screen and stays stuck to the viewport */
+.splash {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: black;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

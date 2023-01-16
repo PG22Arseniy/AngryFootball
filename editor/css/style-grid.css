@@ -1,0 +1,58 @@
+/* @copyright 2014-2022, Vancouver Film School */
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 5em 1fr 4fr 1fr 6em;
+    grid-template-rows: 1em 1fr 5fr 10em 2em;
+}
+    .grid-gutter-left {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .grid-sidebar-left {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .grid-column-main {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .grid-column-full {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    .grid-sidebar-right {
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+
+    .grid-gutter-right {
+        grid-column-start: 5;
+        grid-column-end: 6;
+    }
+
+    .grid-row-top {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .grid-row-head {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-row-main {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .grid-row-full {
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    .grid-row-tail {
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .grid-row-foot {
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }

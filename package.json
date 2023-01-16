@@ -1,0 +1,40 @@
+{
+  "name": "pg22ap_angryfootball",
+  "version": "1.0.0",
+  "description": "Angry birds-like browser game",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon --inspect server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vfs-sct/PG22AP_AngryFootball.git"
+  },
+  "contributors": [
+    {
+      "name": "Shatrujit Aditya Kumar",
+      "email": "pg22shatrujit@vfs.com",
+      "url": "https://github.com/pg22shatrujit"
+    },
+    {
+      "name": "Arseniy Skudaev",
+      "email": "pg22arseniy@vfs.com",
+      "url": "https://github.com/pg22arseniy"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vfs-sct/PG22AP_AngryFootball/issues"
+  },
+  "homepage": "https://github.com/vfs-sct/PG22AP_AngryFootball#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "fs-extra": "^10.0.1",
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
